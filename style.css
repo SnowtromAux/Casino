@@ -1,0 +1,131 @@
+.wrapper{
+	border: 1px solid black;
+	width: 1200px;
+	height: 700px;
+	/* background-image: url("images/Background.jpeg"); */
+}
+
+.titleBar{
+	height: 10%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.game{
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(7 , 1fr);
+}
+
+.pocket, .poc_line{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+}
+
+.pocket{
+	flex-direction: column;
+}
+
+.lineCount{
+	width: 60%;
+	height: 70%;
+	border: 1px solid black;
+	border-radius: 15px;
+	display: grid;
+	grid-template-rows: repeat(1fr, 4);
+}
+
+.line{
+	height: 96%;
+	width: 90%;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+
+.spin{
+	border-radius: 50%;
+	width: 100%;
+	height: 30%;
+	margin-top: 350px;
+}
+
+.l15, .l10, .l5, .l1{
+	border: 4px solid red;
+}
+.l20{
+	border: 4px solid green;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.l1{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.rotate_img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+
+
+
+
+
+.bottomBar{
+	display: flex;
+	flex-direction: row;	
+	height: 10%;
+	border: 1px solid black;
+}
+
+.balance_box, .bets, .settings{
+	border: 1px solid black;
+	margin-left: 3%;
+	margin-top: 1.3%;
+}
+
+.balance_box{
+	display: flex;
+	flex-direction: row;
+	width: 25%;
+	height: 50%;
+}
+
+.bets{
+	width: 50%;
+	height: 50%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.bets :nth-child(1){
+	border: 3px solid green;
+}
+
+.bets :nth-child(2), .bets :nth-child(3), .bets :nth-child(4), .bets :nth-child(5){
+	border: 3px solid red;
+}
+.balance{
+	font-size: 30px;
+}
+
+.money{
+	margin-left: 10px;
+	font-size: 30px;
+}
+
+.settings{
+	width: 13%;
+	height: 50%;
+}
+
+.winning_line_num{
+	text-align: center;
+	font-size: 40px;
+} 
