@@ -40,6 +40,10 @@ const bets = document.getElementsByClassName("bet");
 const p_money = document.getElementsByClassName("money")[0];
 p_money.innerHTML = money + " $";
 
+let line_show = document.getElementsByClassName("winning_line_num")[0];
+let win_el = document.getElementsByClassName("winning_element")[0];
+let win_bet = document.getElementsByClassName("win_from_line")[0];
+
 let image_matrix = [[1,2,3,4,5],[1,2,3,4,5],[1,2,3,4,5]];
 let winning_lines, winning_count;
 
@@ -76,7 +80,7 @@ function spin(){
 			visualize[i][j] = triples[j][i];
 		}
 	}
-	total_winnings(visualize);
+	total_winnings(visualize, bet_set);
 	showImages(visualize);
 }
 
@@ -260,7 +264,7 @@ function profitFromCode(n){
 		if(win_symbol == 8)return 0;
 	}
 
-	return [coefficients[win_symbol - 1][bonuses], bonuses + 3];
+	return [coefficients[win_symbol - 1][bonuses], bonuses + 3, win_symbol];
 }
 
 function scatter_count(arr){
@@ -295,18 +299,20 @@ function win_from_lines(arr){
 	return winning;
 }
 
-function total_winnings(arr){
+function total_winnings(arr, cur_bet){
 	const win_total = win_from_lines(arr) + win_from_scatter(arr);
-	color_lines();
+	color_lines(arr, cur_bet);
 	money += bet_set * win_total;
 	p_money.innerHTML = `${money }$`;
 	return win_total;
 }
 
-function color_lines(){
+let myel;
+function color_lines(arr, cur_bet){
 	let win_line = 0;
 	if(winning_lines.length > 0){
 		col_interval = setInterval(() => {
+			if(myel)myel.remove();
 			for(let i = 0;i < 3;i++){
 				for(let j = 0;j < 5;j++){
 					const el = image_matrix[i][j];
@@ -324,6 +330,53 @@ function color_lines(){
 					el.style.border = `10px dashed ${line_colors[winning_lines[win_line]]}`;
 				
 			}
+			line_show.innerHTML = `Line ${winning_lines[win_line]}`;
+			line_show.style.color = line_colors[winning_lines[win_line]]
+			myel = document.createElement("img");
+			
+			ws = profitFromCode(code_of_line(arr, winning_lines[win_line]-1))[2];
+			switch(ws){
+				case 1:
+					myel.src = "images/cherry.png";
+					break;
+			
+				case 2:
+					myel.src = "images/orange.png";
+					break;
+
+				case 3:
+					myel.src = "images/lemon.png";
+					break;
+
+				case 4:
+					myel.src = "images/watermelon.png";
+					break;
+
+				case 5:
+					myel.src = "images/plum.png";
+					break;
+
+				case 6:
+					myel.src = "images/grape.png";
+					break;
+
+				case 7:
+					myel.src = "images/7.png";
+					break;
+
+				case 8:
+					myel.src = "images/star.png";
+					break;
+			}
+			
+			win_el.appendChild(myel)
+			myel.style.width = "100%";
+			myel.style.height = "90%";
+
+			let xd = profitFromCode(code_of_line(arr, winning_lines[win_line]-1))[0];
+
+			win_bet.innerHTML = `Win: ${xd * cur_bet} $`;
+			
 			win_line = (win_line + 1) % winning_lines.length;
 		}, 1000);
 	}
