@@ -372,6 +372,9 @@ function color_lines(arr, cur_bet){
 			win_el.appendChild(myel)
 			myel.style.width = "100%";
 			myel.style.height = "90%";
+			myel.style.marginTop = "3px";
+			myel.style.marginLeft = "3px";
+
 
 			let xd = profitFromCode(code_of_line(arr, winning_lines[win_line]-1))[0];
 
