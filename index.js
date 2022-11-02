@@ -384,3 +384,24 @@ function color_lines(arr, cur_bet){
 		}, 1000);
 	}
 }
+
+let music = true, sfx = true;
+const music_img = document.getElementsByClassName("musics")[0];
+const sfx_img = document.getElementsByClassName("sfxs")[0];
+
+
+function switchMusic(){
+	music = !music;
+	if(music)
+		music_img.src = "images/soundOn.png";
+	else
+		music_img.src = "images/soundOff.png";
+}
+
+function switchSfx(){
+	sfx = !sfx
+	if(sfx)
+		sfx_img.src = "images/sfxOn.png";
+	else
+		sfx_img.src = "images/sfxOff.png";
+}
