@@ -2,104 +2,131 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="super_hot/super_hot.css">
 	</head>
 
 	<body>
-		<div class = "wrapper">
-			<img src = "Images/Background2.jpeg"; class = "bg_img">
-			
-			<div class = "titleBar">
-				<div class="container">
-					<div class="row">
-					  <div class="col-md-12 text-center">
-						<h3 class="animate-charcter">Stenli super hot</h3>
-					  </div>
-					</div>
-				  </div>
+		<div class = "start_menu">
+			<div class = "top">
+				<>
 			</div>
-			
-			<div class = "game">
-				<div class = "pocket">
-					<div class = "lineCount">
-						<button class = "l20">20</button>
-						<button class = "l15">15</button>
-						<button class = "l10">10</button>
-						<button class = "l5">5</button>
-						<button class = "l1">1</button>
+			<img class = "superhot"; src = "Images/super_hot_20.png"; onclick = "start_super_hot()">
+			<div class = "superhot"></div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class = "super_hot_game">
+			<div class = "wrapper">
+				<img class = "bg_img"; src = "Images/Background2.jpeg">
+				
+				<div class = "titleBar">
+					<div class = "left">
+						<img src = "Images/exit_button_super_hot.png"; class = "back_button"; onclick = "stop_super_hot()">
+					</div>
+
+					<div class="middle">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h3 class="animate-charcter">Alex super hot</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class = "right">
+
 					</div>
 				</div>
-
 				
-				<div class = "poc_line">
-					<div class = "line">
+				<div class = "game">
+					<div class = "pocket">
+						<div class = "lineCount">
+							<button class = "l20">20</button>
+							<button class = "l15">15</button>
+							<button class = "l10">10</button>
+							<button class = "l5">5</button>
+							<button class = "l1">1</button>
+						</div>
+					</div>
+
 					
-					</div>
-				</div>
-				
-
-			
-				<div class = "poc_line">
-					<div class = "line">
-					
-					</div>
-				</div>
-				
-
-				
-				<div class = "poc_line">
-					<div class = "line">
+					<div class = "poc_line">
+						<div class = "line">
 						
+						</div>
 					</div>
-				</div>
-
-	
-				<div class = "poc_line">
-					<div class = "line">
 					
-					</div>
-				</div>
+
 				
-
-				<div class = "poc_line">
-					<div class = "line">
+					<div class = "poc_line">
+						<div class = "line">
 						
+						</div>
+					</div>
+					
+
+					
+					<div class = "poc_line">
+						<div class = "line">
+							
+						</div>
+					</div>
+
+		
+					<div class = "poc_line">
+						<div class = "line">
+						
+						</div>
+					</div>
+					
+
+					<div class = "poc_line">
+						<div class = "line">
+							
+						</div>
+					</div>
+
+					<div class = "pocket">
+						<div class = "winning_line_num">Line</div>
+						<div class = "winning_element"></div>
+						<div class = "win_from_line"></div>  
+						<div class = "spin">
+							<img src = "Images/rotate.png"; class = "rotate_img"; onclick = "spin()">
+						</div>	
 					</div>
 				</div>
+		
+				<div class = "bottomBar">
+					<div class = "balance_box">
+						<label class = "balance">Balance:</label>
+						<div class = "money"></div>
+					</div>
 
-				<div class = "pocket">
-					<div class = "winning_line_num">Line</div>
-					<div class = "winning_element"></div>
-					<div class = "win_from_line"></div>  
-					<div class = "spin">
-						<img src = "Images/rotate.png"; class = "rotate_img"; onclick = "spin()">
-					</div>	
-				</div>
+					<div class = "bets">
+						<button class = "bet"; onclick = "changeBet(20, 0)">20</button>
+						<button class = "bet"; onclick = "changeBet(40, 1)">40</button>
+						<button class = "bet"; onclick = "changeBet(100, 2)">100</button>
+						<button class = "bet"; onclick = "changeBet(200, 3)">200</button>
+						<button class = "bet"; onclick = "changeBet(400, 4)">400</button>
+					</div>
+
+					<div class = "settings">
+						<div class = "sfx"; onclick="switchSfx()">
+							<img src = "Images/sfxOn.png"; class = "sfxs">
+						</div>
+						<div class = "music"; onclick="switchMusic()">
+							<img src = "Images/soundOn.png"; class = "musics">
+						</div>
+					</div>
+				</div>	
 			</div>
-	
-			<div class = "bottomBar">
-				<div class = "balance_box">
-					<label class = "balance">Balance:</label>
-					<div class = "money"></div>
-				</div>
-
-				<div class = "bets">
-					<button class = "bet"; onclick = "changeBet(20, 0)">20</button>
-					<button class = "bet"; onclick = "changeBet(40, 1)">40</button>
-					<button class = "bet"; onclick = "changeBet(100, 2)">100</button>
-					<button class = "bet"; onclick = "changeBet(200, 3)">200</button>
-					<button class = "bet"; onclick = "changeBet(400, 4)">400</button>
-				</div>
-
-				<div class = "settings">
-					<div class = "sfx"; onclick="switchSfx()">
-						<img src = "Images/sfxOn.png"; class = "sfxs">
-					</div>
-					<div class = "music"; onclick="switchMusic()">
-						<img src = "Images/soundOn.png"; class = "musics">
-					</div>
-				</div>
-			</div>	
 		</div>
 		<script src = "index.js"></script>
+		<script src = "super_hot/super_hot.js"></script>
 	</body>
 </html>
