@@ -1,0 +1,25 @@
+{
+  "name": "casino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnowtromAux/Casino.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SnowtromAux/Casino/issues"
+  },
+  "homepage": "https://github.com/SnowtromAux/Casino#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
