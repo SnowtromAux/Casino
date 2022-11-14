@@ -16,7 +16,7 @@
 	grid-template-columns: 2fr 3fr 2fr;
 	width: 100%;
 	height: 120px;
-	border: 1px solid black;
+	background-color: black;
 }
 
 .top_start_left{
@@ -24,18 +24,80 @@
 	height: 120px;
 }
 
+.alex_logo{
+	width: 150px;
+	height: 120px;
+}
 
+.start_title{
+	color: white;
+	font-size: 50px;
+	vertical-align: center;
+	text-align: center;
+}
 
+.start_img{
+	width: 1200px;
+	height: 700px;
+	position: absolute;
+	z-index: -1;
+}
 
+.user{
+	width: 120px;
+	height: 120px;
+	margin-left: 200px;
+	text-align: center;
+}
 
-.superhot{
+.user_img{
+	height: 80px;
+	width: 80px;
+	margin-left: 5px;
+	margin-top: 10px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 60px;
+	cursor: pointer;
+}
+
+.username{
+	color: white;
+}
+
+.game_icon{
 	margin-left: 40px;;
 	margin-top: 50px;
-	width: 150px;
+	width: 250px;
 	height: 150px;
 	cursor: pointer;
 }
 
 .super_hot_game{
+	display: none;
+}
+
+.game_row_1{
+	width: 290px;
+	text-align: center;
+}
+
+.game1_1_title{
+	margin-left: 40px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.body_start{
+	display: flex;
+	flex-direction: row;
+}
+
+.game_icon:hover{
+	border: 2px solid green;
+}
+
+.aviator{
 	display: none;
 }
