@@ -65,10 +65,25 @@
 	color: white;
 }
 
-.superhot{
+.user_img{
+	height: 80px;
+	width: 80px;
+	margin-left: 5px;
+	margin-top: 10px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 60px;
+	cursor: pointer;
+}
+
+.username{
+	color: white;
+}
+
+.game_icon{
 	margin-left: 40px;;
 	margin-top: 50px;
-	width: 150px;
+	width: 250px;
 	height: 150px;
 	cursor: pointer;
 }
@@ -77,8 +92,8 @@
 	display: none;
 }
 
-.game1_1{
-	width: min-content;
+.game_row_1{
+	width: 290px;
 	text-align: center;
 }
 
@@ -87,4 +102,17 @@
 	color: white;
 	font-weight: bold;
 	font-size: 20px;
+}
+
+.body_start{
+	display: flex;
+	flex-direction: row;
+}
+
+.game_icon:hover{
+	border: 2px solid green;
+}
+
+.aviator{
+	display: none;
 }

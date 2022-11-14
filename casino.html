@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>AlexBet</title>
+		<link rel="icon" type="image/x-icon" href="Images/alex_logo.png">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="super_hot/super_hot.css">
+		<link rel="stylesheet" href="aviator/aviator.css">
 	</head>
 
 	<body>
+		<!-- Main Menu -->
 		<div class = "start_menu">
 			<img class = "start_img"; src = "Images/casino_bg.jpeg">
 			<div class = "top_start">
@@ -17,20 +21,19 @@
 				</div>
 			</div>
 			<div class = "body_start">
-				<div class = "game1_1">
-					<img class = "superhot"; src = "Images/super_hot_20.png"; onclick = "start_super_hot()">
-					<label class = "game1_1_title">Alex Super Hot</label>
+				<div class = "game_row_1">
+					<img class = "game_icon"; src = "Images/20_super_hot.jpeg"; onclick = "start_super_hot()">
+					<label class = "game1_1_title">20 Super Hot</label>
+				</div>
+
+				<div class = "game_row_1">
+					<img class = "game_icon"; src = "Images/aviator.jpeg"; onclick = "start_aviator()">
+					<label class = "game1_1_title">Aviator</label>
 				</div>
 			</div>
 		</div>
 
-
-
-
-
-
-
-
+		<!-- Super Hot Game -->
 		<div class = "super_hot_game">
 			<div class = "wrapper">
 				<img class = "bg_img"; src = "Images/Background2.jpeg">
@@ -43,7 +46,7 @@
 					<div class="middle">
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<h3 class="animate-charcter">Alex super hot</h3>
+								<h3 class="animate-charcter">20 super hot</h3>
 							</div>
 						</div>
 					</div>
@@ -135,8 +138,15 @@
 					</div>
 				</div>	
 			</div>
+			<script src = "super_hot/super_hot.js"></script>
 		</div>
+
+		<!-- Aviator Game -->
+		<div class = "aviator">
+			<script src = "aviator/aviator.js"></script>
+
+		</div>
+
 		<script src = "index.js"></script>
-		<script src = "super_hot/super_hot.js"></script>
 	</body>
 </html>
