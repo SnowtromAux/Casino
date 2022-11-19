@@ -1,5 +1,13 @@
 let menu = "start";
+class Profile{
+	constructor(loggedIn, username, picture){
+		this.loggedIn = loggedIn;
+		this.username = username;
+		this.picture = picture;
+	}
+}
 
+let player = new Profile(false, "Alex", "./Images/unlogged_user.png")
 //Game 1
 function start_super_hot(){
 	menu = "super_hot";

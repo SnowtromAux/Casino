@@ -59,7 +59,7 @@
 .super_hot_game {
   display: none; }
 
-.aviator {
+.aviator_game {
   display: none; }
 
 .super_hot_game .animate-charcter {
@@ -232,3 +232,103 @@
 @keyframes textclip {
   to {
     background-position: 200% center; } }
+
+.aviator_game {
+  width: 1200px;
+  height: 700px; }
+  .aviator_game .wrapper {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; }
+    .aviator_game .wrapper .bets {
+      display: grid;
+      grid-template-rows: 1fr 7fr; }
+      .aviator_game .wrapper .bets > div {
+        border: 1px solid black; }
+      .aviator_game .wrapper .bets .bets_title {
+        align-items: center;
+        justify-content: center;
+        display: flex; }
+        .aviator_game .wrapper .bets .bets_title > label {
+          text-align: center;
+          font-size: 50px; }
+    .aviator_game .wrapper .game {
+      display: grid;
+      grid-template-rows: 1fr 5.5fr 1.5fr; }
+      .aviator_game .wrapper .game .last_coeficients {
+        border: 1px solid black; }
+      .aviator_game .wrapper .game .diagram {
+        border: 1px solid black; }
+      .aviator_game .wrapper .game .bottomBar {
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center; }
+        .aviator_game .wrapper .game .bottomBar .bet {
+          height: 70%;
+          width: 70%;
+          border: 1px solid black;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          text-align: center; }
+          .aviator_game .wrapper .game .bottomBar .bet .bet_options {
+            justify-items: center;
+            align-items: center;
+            display: grid;
+            grid-template-rows: 1.5fr 2fr; }
+            .aviator_game .wrapper .game .bottomBar .bet .bet_options .bet_input {
+              width: 80%;
+              height: 50%; }
+            .aviator_game .wrapper .game .bottomBar .bet .bet_options .bet_choose {
+              display: grid;
+              margin-left: 3px;
+              margin-right: 3px;
+              margin-bottom: 3px;
+              width: 100%;
+              height: 100%;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 1fr; }
+              .aviator_game .wrapper .game .bottomBar .bet .bet_options .bet_choose .choose {
+                border: 1px solid black;
+                width: 100%;
+                height: 100%; }
+          .aviator_game .wrapper .game .bottomBar .bet .bet_button {
+            width: 100%;
+            height: 100%; }
+    .aviator_game .wrapper .chat {
+      border: 1px solid black;
+      display: grid;
+      grid-template-rows: 7.5fr 0.5fr; }
+      .aviator_game .wrapper .chat .live_chat {
+        border-bottom: 1px solid black;
+        width: 100%; }
+        .aviator_game .wrapper .chat .live_chat .message_box {
+          border: 1px solid black;
+          height: fit-content;
+          width: 100%; }
+          .aviator_game .wrapper .chat .live_chat .message_box .header {
+            height: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+            .aviator_game .wrapper .chat .live_chat .message_box .header .image {
+              width: 30px;
+              height: 100%;
+              background-color: green; }
+            .aviator_game .wrapper .chat .live_chat .message_box .header .sender {
+              margin-left: 5px;
+              font-size: 20px; }
+          .aviator_game .wrapper .chat .live_chat .message_box .message {
+            word-break: break-all; }
+      .aviator_game .wrapper .chat .type_message {
+        border-top: 1px solid black;
+        display: flex; }
+        .aviator_game .wrapper .chat .type_message .message {
+          height: 90%;
+          width: 80%; }
+        .aviator_game .wrapper .chat .type_message .send_message {
+          width: 20%; }

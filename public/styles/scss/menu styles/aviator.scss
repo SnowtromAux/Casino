@@ -1,0 +1,125 @@
+.aviator_game{
+    width: 1200px;
+    height: 700px;
+    .wrapper{
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        .bets{
+            display: grid;
+            grid-template-rows: 1fr 7fr;
+            >div{
+                border: 1px solid black;
+            }
+            .bets_title{
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                >label{
+                    text-align: center;
+                    font-size: 50px;
+                }
+            }
+        }
+        .game{
+            display: grid;
+            grid-template-rows: 1fr 5.5fr 1.5fr;
+            .last_coeficients{
+                border: 1px solid black;
+            }
+            .diagram{
+                border: 1px solid black;
+            }
+            .bottomBar{
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                .bet{
+                    height: 70%;
+                    width: 70%;
+                    border: 1px solid black;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    text-align: center;
+                    .bet_options{
+                        justify-items: center;
+                        align-items: center;
+                        display: grid;
+                        grid-template-rows: 1.5fr 2fr;
+                        .bet_input{
+                            width: 80%;
+                            height: 50%;
+                        }
+                        .bet_choose{
+                            display: grid;
+                            margin-left: 3px;
+                            margin-right: 3px;
+                            margin-bottom: 3px;
+                            width: 100%;
+                            height: 100%;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows:  1fr 1fr;
+                            .choose{
+                                border: 1px solid black;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .bet_button{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .chat{
+            border: 1px solid black;
+            display: grid;
+            grid-template-rows: 7.5fr 0.5fr;
+            .live_chat{
+                border-bottom: 1px solid black;
+                width: 100%;
+                .message_box{
+                    border: 1px solid black;
+                    height: fit-content;
+                    width: 100%;
+                    .header{
+                        height: 30px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .image{
+                            width: 30px;
+                            height: 100%;
+                            background-color: green;
+                        }
+                        .sender{
+                            margin-left: 5px;
+                            font-size: 20px;
+                        }
+                    }
+                    .message{
+                        word-break: break-all;
+                    }
+                }
+            }
+            .type_message{
+                border-top: 1px solid black;
+                display: flex;
+                .message{
+                    height: 90%;
+                    width: 80%;
+                }
+                .send_message{
+                    width: 20%;
+                }
+            }
+        }
+    }
+}

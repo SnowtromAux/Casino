@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', function(socket){
     //console.log("niakoi se svurza");
+    socket.on("send message", (player_image, player_name, text) => {
+        io.emit("delivery message", player_image, player_name, text);
+    })    
 });
 
 app.use(express.static(__dirname + "/public"));
@@ -24,7 +27,7 @@ http.listen(port, () => {
 
 
 //Online Games
-Aviator();
+// Aviator();
 
 
 function Aviator(){
@@ -45,4 +48,3 @@ function Aviator(){
         return (Math.random()*5).toFixed(2);
     }
 }
-
