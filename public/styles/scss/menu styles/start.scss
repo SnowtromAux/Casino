@@ -1,0 +1,79 @@
+.start_menu{
+	width: 1200px;
+	height: 700px;
+    .start_img{
+        width: 1200px;
+        height: 700px;
+        position: absolute;
+        z-index: -1;
+    }
+    .top_start{
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+        width: 100%;
+        height: 120px;
+        background-color: black;
+        .alex_logo{
+            width: 150px;
+            height: 120px;
+        }
+        .start_title{
+            color: white;
+            font-size: 50px;
+            vertical-align: center;
+            text-align: center;
+        }
+        .user{
+            width: 120px;
+            height: 120px;
+            margin-left: 200px;
+            text-align: center;
+            .user_img{
+                height: 80px;
+                width: 80px;
+                margin-left: 5px;
+                margin-top: 10px;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 60px;
+                cursor: pointer;
+            }     
+            .username{
+                color: white;
+            }
+        }
+    }
+    .body_start{
+        display: flex;
+        flex-direction: row;
+        .game_row_1{
+            width: 290px;
+            text-align: center;
+            .game_icon{
+                margin-left: 40px;;
+                margin-top: 50px;
+                width: 250px;
+                height: 150px;
+                cursor: pointer;
+            }
+            .game_icon:hover{
+                border: 2px solid green;
+            }
+            .game1_1_title{
+                margin-left: 40px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.super_hot_game{
+	display: none;
+}
+
+
+.aviator{
+	display: none;
+}

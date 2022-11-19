@@ -18,6 +18,6 @@ function stop_super_hot(){
 //Game 2
 function start_aviator(){
 	menu = "aviator";
-	document.getElementsByClassName("aviator")[0].style.display = "block";
+	document.getElementsByClassName("aviator_game")[0].style.display = "block";
 	document.getElementsByClassName("start_menu")[0].style.display = "none";
 }

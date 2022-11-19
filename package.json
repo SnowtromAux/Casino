@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "sass": "node-sass public/styles/scss/main.scss public/styles/css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "express": "^4.18.2",
+    "node-sass": "^8.0.0",
     "socket.io": "^4.5.3"
   },
   "devDependencies": {

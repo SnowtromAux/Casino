@@ -1,4 +1,5 @@
 const express = require('express');
+const { dirname } = require('path');
 const app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -9,12 +10,39 @@ app.get('/', (req, res) => {
 })
 
 io.on('connection', function(socket){
-    console.log("niakoi se svurza");
-  
+    //console.log("niakoi se svurza");
 });
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 http.listen(port, () => {
     console.log(`Now listening on port ${port}`); 
 });
+
+
+
+
+
+//Online Games
+Aviator();
+
+
+function Aviator(){
+    let curMultiplier = 1, endMultiplier = MultiplierCalculation();
+    const interval_time = 50;
+    let interval = setInterval(()=>{
+        if(curMultiplier >= endMultiplier){
+            io.emit("finish", curMultiplier)
+            setTimeout(Aviator, 5000);
+            clearInterval(interval);
+        }else{
+            curMultiplier += 0.01;
+            io.emit("update", curMultiplier);
+        }
+    }, interval_time);
+
+    function MultiplierCalculation(){
+        return (Math.random()*5).toFixed(2);
+    }
+}
+

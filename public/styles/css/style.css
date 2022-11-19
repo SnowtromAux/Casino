@@ -1,0 +1,234 @@
+.start_menu {
+  width: 1200px;
+  height: 700px; }
+  .start_menu .start_img {
+    width: 1200px;
+    height: 700px;
+    position: absolute;
+    z-index: -1; }
+  .start_menu .top_start {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    width: 100%;
+    height: 120px;
+    background-color: black; }
+    .start_menu .top_start .alex_logo {
+      width: 150px;
+      height: 120px; }
+    .start_menu .top_start .start_title {
+      color: white;
+      font-size: 50px;
+      vertical-align: center;
+      text-align: center; }
+    .start_menu .top_start .user {
+      width: 120px;
+      height: 120px;
+      margin-left: 200px;
+      text-align: center; }
+      .start_menu .top_start .user .user_img {
+        height: 80px;
+        width: 80px;
+        margin-left: 5px;
+        margin-top: 10px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 60px;
+        cursor: pointer; }
+      .start_menu .top_start .user .username {
+        color: white; }
+  .start_menu .body_start {
+    display: flex;
+    flex-direction: row; }
+    .start_menu .body_start .game_row_1 {
+      width: 290px;
+      text-align: center; }
+      .start_menu .body_start .game_row_1 .game_icon {
+        margin-left: 40px;
+        margin-top: 50px;
+        width: 250px;
+        height: 150px;
+        cursor: pointer; }
+      .start_menu .body_start .game_row_1 .game_icon:hover {
+        border: 2px solid green; }
+      .start_menu .body_start .game_row_1 .game1_1_title {
+        margin-left: 40px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px; }
+
+.super_hot_game {
+  display: none; }
+
+.aviator {
+  display: none; }
+
+.super_hot_game .animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 50px; }
+
+.super_hot_game .wrapper {
+  border: 1px solid black;
+  width: 1200px;
+  height: 700px; }
+  .super_hot_game .wrapper .bg_img {
+    width: 1200px;
+    height: 700px;
+    opacity: 1;
+    position: absolute;
+    z-index: -2; }
+  .super_hot_game .wrapper .titleBar {
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; }
+    .super_hot_game .wrapper .titleBar .left {
+      margin-top: -40px; }
+      .super_hot_game .wrapper .titleBar .left .back_button {
+        margin-top: 30px;
+        margin-left: 50px;
+        width: 65px;
+        cursor: pointer; }
+    .super_hot_game .wrapper .titleBar .middle {
+      margin-top: -40px;
+      text-align: center; }
+    .super_hot_game .wrapper .titleBar .right {
+      margin-top: -40px; }
+  .super_hot_game .wrapper .game {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); }
+    .super_hot_game .wrapper .game .pocket {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .super_hot_game .wrapper .game .pocket .lineCount {
+        width: 50%;
+        height: 80%;
+        border: 1px solid black;
+        border-radius: 15px;
+        display: grid;
+        grid-template-rows: repeat(1fr, 4); }
+        .super_hot_game .wrapper .game .pocket .lineCount .l15, .super_hot_game .wrapper .game .pocket .lineCount .l10, .super_hot_game .wrapper .game .pocket .lineCount .l5, .super_hot_game .wrapper .game .pocket .lineCount .l1 {
+          border: 4px solid red; }
+        .super_hot_game .wrapper .game .pocket .lineCount .l20 {
+          border: 4px solid green;
+          font-size: 20px;
+          color: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px; }
+        .super_hot_game .wrapper .game .pocket .lineCount .l1 {
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px; }
+        .super_hot_game .wrapper .game .pocket .lineCount .l15, .super_hot_game .wrapper .game .pocket .lineCount .l10, .super_hot_game .wrapper .game .pocket .lineCount .l5, .super_hot_game .wrapper .game .pocket .lineCount .l1, .super_hot_game .wrapper .game .pocket .lineCount .l20 {
+          border: 3px solid darkblue;
+          background-color: deeppink; }
+      .super_hot_game .wrapper .game .pocket .winning_line_num {
+        text-align: center;
+        font-size: 40px;
+        margin-top: -120px; }
+      .super_hot_game .wrapper .game .pocket .winning_element {
+        width: 100px;
+        height: 100px;
+        border: 3px solid darkblue;
+        background-color: pink; }
+      .super_hot_game .wrapper .game .pocket .win_from_line {
+        height: 40px;
+        font-size: 20px; }
+      .super_hot_game .wrapper .game .pocket .spin {
+        border-radius: 50%;
+        width: 100%;
+        height: 150px;
+        margin-bottom: 30px; }
+        .super_hot_game .wrapper .game .pocket .spin .rotate_img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%; }
+    .super_hot_game .wrapper .game .poc_line {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .super_hot_game .wrapper .game .poc_line .line {
+        height: 96%;
+        width: 90%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        border: 5px solid  darkblue;
+        border-radius: 8px;
+        background-color: purple; }
+  .super_hot_game .wrapper .bottomBar {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    border: 3px solid black;
+    background-color: sienna; }
+    .super_hot_game .wrapper .bottomBar .balance_box {
+      display: flex;
+      flex-direction: row;
+      width: 25%;
+      height: 50%;
+      color: white;
+      margin-left: 3%;
+      margin-top: 1.3%; }
+      .super_hot_game .wrapper .bottomBar .balance_box .balance {
+        font-size: 35px; }
+      .super_hot_game .wrapper .bottomBar .balance_box .money {
+        margin-left: 10px;
+        font-size: 35px; }
+    .super_hot_game .wrapper .bottomBar .bets {
+      width: 50%;
+      height: 50%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid black; }
+    .super_hot_game .wrapper .bottomBar .settings {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 13%;
+      height: 50%; }
+      .super_hot_game .wrapper .bottomBar .settings .sfx {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px; }
+        .super_hot_game .wrapper .bottomBar .settings .sfx .sfxs {
+          width: 100%;
+          height: 100%; }
+      .super_hot_game .wrapper .bottomBar .settings .music {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px; }
+        .super_hot_game .wrapper .bottomBar .settings .music .musics {
+          width: 100%;
+          height: 100%; }
+    .super_hot_game .wrapper .bottomBar .bets, .super_hot_game .wrapper .bottomBar .settings {
+      margin-left: 3%;
+      margin-top: 1.6%; }
+
+.super_hot_game .sfxs:hover, .super_hot_game .musics:hover {
+  cursor: pointer; }
+
+.super_hot_game .bet:hover, .super_hot_game .spin:hover {
+  cursor: pointer; }
+
+.super_hot_game .bets :nth-child(1) {
+  border: 3px solid green; }
+
+.super_hot_game .bets :nth-child(2), .super_hot_game .bets :nth-child(3), .super_hot_game .bets :nth-child(4), .super_hot_game .bets :nth-child(5) {
+  border: 3px solid red; }
+
+@keyframes textclip {
+  to {
+    background-position: 200% center; } }
