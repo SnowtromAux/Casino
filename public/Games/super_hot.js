@@ -29,7 +29,7 @@ const line_colors = [
 					]
 
 const line_count = 20;
-let money = 100000, bet_set = 20;
+let bet_set = 20;
 let bet_index = 0;
 let coloring;
 
@@ -38,7 +38,6 @@ const lines = document.getElementsByClassName("line");
 const bets = document.getElementsByClassName("bet"); 
 
 const p_money = document.getElementsByClassName("money")[0];
-p_money.innerHTML = money + " $";
 
 let line_show = document.getElementsByClassName("winning_line_num")[0];
 let win_el = document.getElementsByClassName("winning_element")[0];
@@ -62,8 +61,8 @@ function get_triple(reel){
 
 
 function spin(){
-	money -= bet_set;
-	p_money.innerHTML = `${money }$`;
+	player.money -= bet_set;
+	p_money.innerHTML = `${player.money }$`;
 	if(col_interval)clearInterval(col_interval);
 	const cur_images = document.getElementsByClassName("gameplay");
 	while(cur_images.length > 0)cur_images[0].remove();
@@ -302,8 +301,8 @@ function win_from_lines(arr){
 function total_winnings(arr, cur_bet){
 	const win_total = win_from_lines(arr) + win_from_scatter(arr);
 	color_lines(arr, cur_bet);
-	money += bet_set * win_total;
-	p_money.innerHTML = `${money }$`;
+	player.money += bet_set * win_total;
+	p_money.innerHTML = `${player.money }$`;
 	return win_total;
 }
 

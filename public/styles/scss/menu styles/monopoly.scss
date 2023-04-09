@@ -1,0 +1,77 @@
+.monopoly{
+    width: 100%;
+    height: 100%;
+    display: none;
+    .wrapper{
+        width: 1500px;
+        height: 750px;
+        .top_part{
+            display: flex;
+            .left{
+                width: 1200px;
+                height: 650px;
+                #myCanvas{
+                    border: 5px solid black;
+                    // background-color: gray;
+                }
+            }
+            .right{
+                margin: 25px;
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                height: 650px;
+                .bet{
+                    margin-top: 3px;
+                }
+                .bet:nth-child(3){
+                    border: 2px solid green;
+                }
+                .dice{
+                    margin-top: 30px;
+                }
+                .roll{
+                    margin-top: 3px;
+                }
+                .cashout{
+                    margin-top: 3px;
+                }
+                .insert{
+                    text-align: center;
+                    margin-top: 30px;
+                }
+                .turnslabel{
+                    margin-top: 20px;
+                }
+                .turns{
+                    height: 180px;
+                    margin-top: 3px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: scroll;
+                }
+                .check_wrapper{
+                    margin-top: 3px;
+                    display: flex;
+                    .check_label{
+                        margin-left: 10px;
+                    }
+                }
+                // .bot_speed{
+                //     margin-top: 3px;
+                // }
+                // .start_game_label{
+                //     text-align: center;
+                //     margin-top: 100px;
+                // }
+                // .start_game{
+                //     margin-top: 3px;
+                // }
+            }
+        }
+
+        .bottom_part{
+            height: 100px;
+        }
+    }
+}

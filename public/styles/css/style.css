@@ -264,12 +264,19 @@
       .aviator_game .wrapper .game .bottomBar {
         border: 1px solid black;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-items: center;
         align-items: center; }
+        .aviator_game .wrapper .game .bottomBar .balance_box {
+          display: flex; }
+          .aviator_game .wrapper .game .bottomBar .balance_box .balance {
+            font-size: 25px; }
+          .aviator_game .wrapper .game .bottomBar .balance_box .money {
+            margin-left: 10px;
+            font-size: 25px; }
         .aviator_game .wrapper .game .bottomBar .bet {
           height: 70%;
-          width: 70%;
+          width: 90%;
           border: 1px solid black;
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -294,21 +301,27 @@
               .aviator_game .wrapper .game .bottomBar .bet .bet_options .bet_choose .choose {
                 border: 1px solid black;
                 width: 100%;
-                height: 100%; }
+                height: 100%;
+                cursor: pointer; }
           .aviator_game .wrapper .game .bottomBar .bet .bet_button {
             width: 100%;
-            height: 100%; }
+            height: 100%;
+            background-color: green;
+            cursor: pointer; }
     .aviator_game .wrapper .chat {
       border: 1px solid black;
       display: grid;
-      grid-template-rows: 7.5fr 0.5fr; }
+      grid-template-rows: 7.5fr 0.5fr;
+      overflow-y: scroll; }
       .aviator_game .wrapper .chat .live_chat {
         border-bottom: 1px solid black;
-        width: 100%; }
+        width: 100%;
+        overflow: auto; }
         .aviator_game .wrapper .chat .live_chat .message_box {
           border: 1px solid black;
           height: fit-content;
-          width: 100%; }
+          width: 100%;
+          overflow: auto; }
           .aviator_game .wrapper .chat .live_chat .message_box .header {
             height: 30px;
             width: 100%;
@@ -332,3 +345,52 @@
           width: 80%; }
         .aviator_game .wrapper .chat .type_message .send_message {
           width: 20%; }
+
+.monopoly {
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .monopoly .wrapper {
+    width: 1500px;
+    height: 750px; }
+    .monopoly .wrapper .top_part {
+      display: flex; }
+      .monopoly .wrapper .top_part .left {
+        width: 1200px;
+        height: 650px; }
+        .monopoly .wrapper .top_part .left #myCanvas {
+          border: 5px solid black; }
+      .monopoly .wrapper .top_part .right {
+        margin: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 650px; }
+        .monopoly .wrapper .top_part .right .bet {
+          margin-top: 3px; }
+        .monopoly .wrapper .top_part .right .bet:nth-child(3) {
+          border: 2px solid green; }
+        .monopoly .wrapper .top_part .right .dice {
+          margin-top: 30px; }
+        .monopoly .wrapper .top_part .right .roll {
+          margin-top: 3px; }
+        .monopoly .wrapper .top_part .right .cashout {
+          margin-top: 3px; }
+        .monopoly .wrapper .top_part .right .insert {
+          text-align: center;
+          margin-top: 30px; }
+        .monopoly .wrapper .top_part .right .turnslabel {
+          margin-top: 20px; }
+        .monopoly .wrapper .top_part .right .turns {
+          height: 180px;
+          margin-top: 3px;
+          display: flex;
+          flex-direction: column;
+          overflow: scroll; }
+        .monopoly .wrapper .top_part .right .check_wrapper {
+          margin-top: 3px;
+          display: flex; }
+          .monopoly .wrapper .top_part .right .check_wrapper .check_label {
+            margin-left: 10px; }
+    .monopoly .wrapper .bottom_part {
+      height: 100px; }

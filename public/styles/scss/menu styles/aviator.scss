@@ -35,12 +35,22 @@
             .bottomBar{
                 border: 1px solid black;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
                 justify-items: center;
                 align-items: center;
+                .balance_box{
+                    display: flex;
+                    .balance{
+                        font-size: 25px;   
+                    }
+                    .money{
+                        margin-left: 10px;
+                        font-size: 25px;   
+                    }
+                }
                 .bet{
                     height: 70%;
-                    width: 70%;
+                    width: 90%;
                     border: 1px solid black;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
@@ -67,12 +77,15 @@
                                 border: 1px solid black;
                                 width: 100%;
                                 height: 100%;
+                                cursor: pointer;
                             }
                         }
                     }
                     .bet_button{
                         width: 100%;
                         height: 100%;
+                        background-color: green;
+                        cursor: pointer;
                     }
                 }
             }
@@ -81,13 +94,17 @@
             border: 1px solid black;
             display: grid;
             grid-template-rows: 7.5fr 0.5fr;
+            overflow-y: scroll;
             .live_chat{
                 border-bottom: 1px solid black;
                 width: 100%;
+                overflow: auto;
                 .message_box{
                     border: 1px solid black;
                     height: fit-content;
                     width: 100%;
+                    overflow: auto;
+
                     .header{
                         height: 30px;
                         width: 100%;

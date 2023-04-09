@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, inital-scale = 1.0">
 		<title>AlexBet</title>
 		<link rel="icon" type="image/x-icon" href="Images/alex_logo.png">
 		<link rel="stylesheet" href="Styles/css/style.css">
@@ -24,7 +25,7 @@
 				<h1 class = "start_title">ALEXBET</h1>
 				<div class = "user">
 					<img class = "user_img"; src = "Images/unlogged_user.png">
-					<label class = "username">Alex</label>
+					<label class = "username"></label>
 				</div>
 			</div>
 			<div class = "body_start">
@@ -36,6 +37,11 @@
 				<div class = "game_row_1">
 					<img class = "game_icon"; src = "Images/aviator.jpeg"; onclick = "start_aviator()">
 					<label class = "game1_1_title">Aviator</label>
+				</div>
+
+				<div class = "game_row_1">
+					<img class = "game_icon"; src = "Images/monopoly.jpeg"; onclick = "start_monopoly()">
+					<label class = "game1_1_title">Monopoly</label>
 				</div>
 			</div>
 		</div>
@@ -180,30 +186,35 @@
 					</div>
 
 					<div class = "bottomBar">
-						<div class = "bet">
-							<div class = "bet_options">
-								<input class = "bet_input"></input>
-								<div class = "bet_choose">
-									<div class = "choose">1</div>
-									<div class = "choose">2</div>
-									<div class = "choose">5</div>
-									<div class = "choose">10</div>
-								</div>
-							</div>
-							<button class = "bet_button">Bet</button>
+						<div class = "balance_box">
+							<label class = "balance">Balance:</label>
+							<div class = "money"></div>
 						</div>
 
 						<div class = "bet">
 							<div class = "bet_options">
-								<input class = "bet_input"></input>
+								<input class = "bet_input"; value="0.20"></input>
 								<div class = "bet_choose">
-									<div class = "choose">1</div>
-									<div class = "choose">2</div>
-									<div class = "choose">5</div>
-									<div class = "choose">10</div>
+									<button class = "choose">1</button>
+									<button class = "choose">2</button>
+									<button class = "choose">5</button>
+									<button class = "choose">10</button>
 								</div>
 							</div>
-							<button class = "bet_button">Bet</button>
+							<button class = "bet_button"; onclick = "Bet(0)">Bet</button>
+						</div>
+
+						<div class = "bet">
+							<div class = "bet_options">
+								<input class = "bet_input"; type="number"; value="0.20"></input>
+								<div class = "bet_choose">
+									<button class = "choose">1</button>
+									<button class = "choose">2</button>
+									<button class = "choose">5</button>
+									<button class = "choose">10</button>
+								</div>
+							</div>
+							<button class = "bet_button"; onclick = "Bet(1)">Bet</button>
 						</div>
 					</div>
 				</div>
@@ -220,8 +231,57 @@
 			</div>
 		</div>
 
+		<div class = "monopoly">
+			<div class = "wrapper">
+				<div class = "top_part">
+					<div class = "left">
+						<canvas id = "myCanvas"; width = "1200"; height = "650"></canvas>
+					</div>
+					<div class = "right">
+						<label class = "p_money"></label>
+						<label class = "p_win">Win: 0</label>
+						<button class = "bet"; onclick = "Bet(0)">1</button>
+						<button class = "bet"; onclick = "Bet(1)">5</button>
+						<button class = "bet"; onclick = "Bet(2)">10</button>
+						<button class = "bet"; onclick = "Bet(3)">20</button>
+						<button class = "bet"; onclick = "Bet(4)">50</button>
+
+						<label class = "dice">Time to roll</label>
+						<button class = "roll"; onclick = "rollDice('player')">Roll</button>
+						<button class = "cashout"; onclick = "cashOut()">Cashout</button>
+						
+						<label class = "insert">Insert bot turns:</label>
+						<input type = "number"; class = "bot_turns_num"></input>
+
+						<label class = "insert2">Bot speed (turns / sec):</label>
+						<input class = "bot_speed" type = "number"></input>
+						
+						<div class = "check_wrapper">
+							<input type = "checkbox"; class = "checkbox"></input>
+							<label class = "check_label">When lose to stop</label>
+						</div>
+
+						<button class = "bot_play"; onclick = "botPlay()">Start bot</button>
+
+						<label class = "jackpots">Bot Jackpots: 0</label>
+
+						<label class = "turns_left">Turns Left: 0</label>
+
+						<label class = "turnslabel">Turns</label>
+						<div class = "turns"></div>
+
+						<!-- <label class = "start_game_label">Start Game</label>
+						<button class = "start_game">Start</button> -->
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+
 		<script src = "index.js"></script>
 		<script src = "Games/super_hot.js"></script>
 		<script src = "Games/aviator.js"></script>
+		<script src = "Games/monopoly.js"></script>
 	</body>
 </html> 
