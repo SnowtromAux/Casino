@@ -7,6 +7,7 @@ const MONEY = 100000;
 let monopoly = document.getElementsByClassName("monopoly")[0];
 let balance = monopoly.getElementsByClassName("p_money")[0];
 let jackpot_bot = 0;
+let bot_completed = 0;
 
 class Start{
     constructor(){
@@ -128,6 +129,7 @@ class Choveche{
 }
 
 let fields = [
+    //--------------- Level 1 ------------------------
     new Start(),
     new Bomb(),
     new Win(0.5, 0, 0),
@@ -154,7 +156,7 @@ let fields = [
     new Bomb(),
     new Bomb(),
     new Win(0, 1, 50),
-    //----------------------------
+    //--------------- Level 2 -----------------------
     new Win(50, 0, 0),
     new Bomb(),
     new Win(57.5, 0, 0),
@@ -330,7 +332,8 @@ function drawArrow(from, to){
 
 }
 
-// let dices = [6, 6, 3, 4, 6], mlp = 0;
+// let dices = [6, 6, 6, 2, 6, 6, 6], mlp = 0;
+
 let dice = 0;
 let diceLabel = monopoly.getElementsByClassName("dice")[0];
 let winned = monopoly.getElementsByClassName("p_win")[0];
@@ -349,13 +352,13 @@ function rollDice(roller){
     balance.innerHTML = `Balance: ${chv.balance.toFixed(1)}`;
 
     dice = Math.floor(Math.random() * 6) + 1;
-    if(dice == 1)ed++;
-    if(dice == 2)dv++;
-    if(dice == 3)tr++;
-    if(dice == 4)ch++;
-    if(dice == 5)pe++;
-    if(dice == 6)sh++;
-    console.log(ed + " | " + dv + " | " + tr + " | " + ch + " | " + pe + " | " + sh)
+    // if(dice == 1)ed++;
+    // if(dice == 2)dv++;
+    // if(dice == 3)tr++;
+    // if(dice == 4)ch++;
+    // if(dice == 5)pe++;
+    // if(dice == 6)sh++;
+    // console.log(ed + " | " + dv + " | " + tr + " | " + ch + " | " + pe + " | " + sh)
 
     // dice = dices[mlp];
     // mlp++;
@@ -368,6 +371,8 @@ function rollDice(roller){
     for(let i = 0;i < fields.length;i++){
         if(fields[i].num == chv.curField){
             if(fields[i].type == "bomb"){
+                console.log("on_bomb")
+                bot_completed = 0;
                 gotbomb = true;
                 in_game = false;
                 
@@ -381,6 +386,7 @@ function rollDice(roller){
                 chv.balance += fields[i].direct * chv.bet;
                 chv.winned = fields[i].win * chv.bet;
             }else if(fields[i].type == "jackpot"){
+                bot_completed = 0;
                 chv.winned = fields[i].win * chv.bet;
                 chv.balance += chv.winned;
                 chv.curField = 1;
@@ -448,6 +454,7 @@ let start_bot_btn = monopoly.getElementsByClassName("bot_play")[0];
 let bot_turns_num = monopoly.getElementsByClassName("bot_turns_num")[0];
 let bot_speed = monopoly.getElementsByClassName("bot_speed")[0];
 let turns_left = monopoly.getElementsByClassName("turns_left")[0];
+let bot_collects_on = monopoly.getElementsByClassName("bot_collects_num")[0];
 function botPlay(){
     bot_play = !bot_play;
     if(bot_play)
@@ -457,19 +464,30 @@ function botPlay(){
     
     let turns = bot_turns_num.value;
     let speed = bot_speed.value;
-    let played_turns = 0;
+    let collect_on = bot_collects_on.value;
+    let bot_played_turns = 0;
+    
 
     let myInterval = setInterval(() => {
-        if(played_turns == turns || !bot_play){
+        if(bot_played_turns == turns || !bot_play){
             bot_play = false;
             turns_left.innerHTML = `Turns Left: 0`;
             clearInterval(myInterval);
             cashOut();
+            start_bot_btn.innerHTML = "Start bot";
         }
-        else{
+        else
+        {
+            bot_played_turns++;
+            bot_completed++;
+            turns_left.innerHTML = `Turns Left: ${turns - bot_played_turns}`;
+            console.log("turn " + bot_completed);
             rollDice("bot");
-            played_turns++;
-            turns_left.innerHTML = `Turns Left: ${turns - played_turns}`;
+            if(bot_completed == collect_on){
+                bot_completed = 0;
+                console.log("cashout")
+                cashOut();
+            }
         }
     }, 1000 / speed);
 
